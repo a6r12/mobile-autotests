@@ -1,6 +1,7 @@
 package tests;
 
 import io.appium.java_client.MobileBy;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -11,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 public class AndroidWikiTests extends TestBase {
 
+    @Tag("selenide")
     @Test
     void searchTest() {
 
