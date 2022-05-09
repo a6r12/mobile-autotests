@@ -28,6 +28,7 @@ public class AndroidWikiTests extends TestBase {
 
     }
 
+    @Tag("selenide")
     @Test
     void verifyNewsTest() {
         step("Verify news page", () -> {
