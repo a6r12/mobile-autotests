@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -27,4 +28,11 @@ public class AndroidWikiTests extends TestBase {
 
     }
 
+    @Test
+    void verifyNewsTest() {
+        step("Verify news page", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/view_card_header_title"))
+                    .shouldHave(Condition.text("In the news"));
+        });
+    }
 }
